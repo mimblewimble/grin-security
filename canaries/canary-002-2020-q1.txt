@@ -1,0 +1,53 @@
+---===[ Grin Canary #002 ]===---
+
+
+Statements
+-----------
+
+The Grin security contacts who have digitally signed this canary state the following:
+
+1. The date of issue of this canary is January 9, 2020.
+
+2. The latest Grin release is v3.0.0 `4704037`
+
+3. No warrants have ever been served to us with regard to the Grin
+Project (e.g. to hand out the private signing keys or to introduce
+backdoors).
+
+4. We plan to publish the next of these canary statements in the first
+two weeks of April 2020. Special note should be taken if no new canary
+is published by that time or if the list of statements changes without
+plausible explanation.
+
+Special announcements
+----------------------
+
+None.
+
+Disclaimers and notes
+----------------------
+
+This canary scheme is not infallible. Although signing the declaration
+makes it very difficult for a third party to produce arbitrary
+declarations, it does not prevent them from using force or other
+means, like blackmail or compromising the signers' laptops, to coerce
+us to produce false declarations.
+
+The block hashes quoted below (Proof of freshness) serve to demonstrate
+that this canary could not have been created prior to the date stated.
+It shows that a series of canaries was not created in advance.
+
+This declaration is merely a best effort and is provided without any
+guarantee or warranty. It is not legally binding in any way to
+anybody. None of the signers should be ever held legally responsible
+for any of the statements made here.
+
+Proof of freshness
+-------------------
+
+$ date -R -u && grin client status | grep 'Last block' | cut -c 18- && curl -s 'https://blockstream.info/api/blocks/tip/hash'; echo && curl -s 'https://api.blockcypher.com/v1/ltc/main' | grep '"hash' | cut -c 12-75 && curl -s 'https://api.blockcypher.com/v1/eth/main' | grep '"hash' | cut -c 12-75
+Thu, 09 Jan 2020 18:55:54 +0000
+0000314fd5973399c4e0de7298ad31035ad9e390a38d6a177d0dd585f3a0f37e
+0000000000000000000236c662298c5e23509e0573f8abc1220abd978acb1cdd
+086f3351444a016dc12a2714439d7bad0bfe1df4111a8bc6be993049af3f6494
+0f4e659c749616e43c545b1bfff07e1bc4860a0420106e8773535ef6bad09cb2
