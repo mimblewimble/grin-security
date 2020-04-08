@@ -1,0 +1,52 @@
+---===[ Grin Canary #003 ]===---
+
+
+Statements
+-----------
+
+The Grin security contacts who have digitally signed this canary state the following:
+
+1. The date of issue of this canary is April 8, 2020.
+
+2. The latest Grin release is v3.1.1 `2cfbb92`
+
+3. No warrants have ever been served to us with regard to the Grin
+Project (e.g. to hand out the private signing keys or to introduce
+backdoors).
+
+4. We plan to publish the next of these canary statements in the first
+two weeks of July 2020. Special note should be taken if no new canary
+is published by that time or if the list of statements changes without
+plausible explanation.
+
+Special announcements
+----------------------
+
+None.
+
+Disclaimers and notes
+----------------------
+
+This canary scheme is not infallible. Although signing the declaration
+makes it very difficult for a third party to produce arbitrary
+declarations, it does not prevent them from using force or other
+means, like blackmail or compromising the signers' laptops, to coerce
+us to produce false declarations.
+
+The block hashes quoted below (Proof of freshness) serve to demonstrate
+that this canary could not have been created prior to the date stated.
+It shows that a series of canaries was not created in advance.
+
+This declaration is merely a best effort and is provided without any
+guarantee or warranty. It is not legally binding in any way to
+anybody. None of the signers should be ever held legally responsible
+for any of the statements made here.
+
+Proof of freshness
+-------------------
+
+$ date -R -u && grin client status | grep 'Last block' | cut -c 18- && curl -s 'https://blockstream.info/api/blocks/tip/hash'; echo && curl -s 'https://api.blockcypher.com/v1/ltc/main' | grep '"hash' | cut -c 12-75 && curl -s 'https://api.blockcypher.com/v1/eth/main' | grep '"hash' | cut -c 12-75
+Wed, 08 Apr 2020 16:28:37 +0000
+0000000000000000000c93841ce543f01e4a8dd5e0b1e6d10cde0c801f197ed2
+5cdaca0ac24aa5fce7548ce440175ac8dbc1f3b7fbc41a035296dfd3aec9ed4f
+2afcf6286b539cfcfb668321dc4846ee3b8254e1760ad36df616f2374c27ea5c
