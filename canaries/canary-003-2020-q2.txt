@@ -1,0 +1,53 @@
+---===[ Grin Canary #003 ]===---
+
+
+Statements
+-----------
+
+The Grin security contacts who have digitally signed this canary state the following:
+
+1. The date of issue of this canary is April 8, 2020.
+
+2. The latest Grin release is v3.1.1 `2cfbb92`
+
+3. No warrants have ever been served to us with regard to the Grin
+Project (e.g. to hand out the private signing keys or to introduce
+backdoors).
+
+4. We plan to publish the next of these canary statements in the first
+two weeks of July 2020. Special note should be taken if no new canary
+is published by that time or if the list of statements changes without
+plausible explanation.
+
+Special announcements
+----------------------
+
+None.
+
+Disclaimers and notes
+----------------------
+
+This canary scheme is not infallible. Although signing the declaration
+makes it very difficult for a third party to produce arbitrary
+declarations, it does not prevent them from using force or other
+means, like blackmail or compromising the signers' laptops, to coerce
+us to produce false declarations.
+
+The block hashes quoted below (Proof of freshness) serve to demonstrate
+that this canary could not have been created prior to the date stated.
+It shows that a series of canaries was not created in advance.
+
+This declaration is merely a best effort and is provided without any
+guarantee or warranty. It is not legally binding in any way to
+anybody. None of the signers should be ever held legally responsible
+for any of the statements made here.
+
+Proof of freshness
+-------------------
+
+$ date -R -u && grin client status | grep 'Last block' | cut -c 18- && curl -s 'https://blockstream.info/api/blocks/tip/hash'; echo && curl -s 'https://api.blockcypher.com/v1/ltc/main' | grep '"hash' | cut -c 12-75 && curl -s 'https://api.blockcypher.com/v1/eth/main' | grep '"hash' | cut -c 12-75
+Wed, 08 Apr 2020 21:56:44 +0000
+00005315d4b1bd8dfd8cd7202d3ae78c27d70bf20a2641c335d782c2c9581aea
+000000000000000000020a911a9f9db2f1e12af1030cb7779e21c2f88d5d734a
+67aa7bfedac169a5f9a0c5c3a0bede88853fbf4c1bb4e92de94b1f2a954cc307
+71d2182fcda9bda8cfcdb7d3fd108a38b6d6e7557a8cd847a996095c5d0219d1
